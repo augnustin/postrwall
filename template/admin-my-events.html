@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="contentText">
+	<div id="contentTextPadding">
+
+{% if err %}
+<div class="msg error">
+{{err}}
+</div>
+{% endif %}
+
+{% if conf %}
+<div class="msg conf">
+{{conf}}
+</div>
+{% endif %}
+
+{% if msg %}
+<div class="msg">
+{{msg}}
+</div>
+{% endif %}
+
+<div id="MyEvents-action"><a href="/Admin/NewEvent">Create Event</a></div>
+
+<h2>My events </h2>
+<div id="event-order">Order by : 
+	<ul>
+		<li><a href="/Admin/?order=name">Name</a></li>
+		<li><a href="/Admin/?order=date">Venue Date</a></li>
+		<li><a href="/Admin/?order=created">Creation Date</a></li>
+		<li><a href="/Admin/?order=modified">Modification Date</a></li>
+	</ul>
+	<label for="past-events"><input type="checkbox" name="past-events" />Show Past Events</label>
+</div>
+  {% for event in events %}
+    {{ event.toHTML }}
+  {% endfor %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+.poster {
+	width: 140px;
+	height: 215px;
+	background-size: 140px 215px;
+	display: inline-block;
+	margin: 6px 10px ;
+	box-shadow: 5px 5px 2px black;
+	opacity:1;
+}
+
+.poster:hover {
+	opacity:0.5;
+}
+
+#nextButton, #prevButton {
+	position:absolute;
+	top: 230px;
+	height:32px;
+	width:45px;
+	cursor:pointer;	
+}
+
+#nextButton {
+	right: 15px;
+	background-image:url('/design/arrow_right.png');
+}
+
+#prevButton {
+	left: -30px;
+	background-image:url('/design/arrow_left.png');
+}
+

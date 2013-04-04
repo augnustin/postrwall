@@ -1,0 +1,35 @@
+<div id="contentText">
+	<div id="contentTextPadding">
+	
+		<h2>Login</h2>
+		<p>
+			Postrwall works with <a href="http://www.deezer.com" target="_blank">Deezer</a> for full tracks without restrictions.
+		</p>
+	
+		<p>
+			Already have an account ?
+		</p>
+	
+		<p>
+			<a href="javascript:void(0);"
+			onclick="    DZ.login(function(response) {
+	    if (response.authResponse) {
+	    console.log('Welcome! Fetching your information.... ');
+	    DZ.api('/user/me', function(response) {
+	    console.log('Good to see you, ' + response.name + '.');
+	    });
+	    } else {
+	    console.log('User cancelled login or did not fully authorize.');
+	    }
+	    }, {perms: 'email'});">Click here to log in</a>
+		</p>
+	
+		<p>
+			Not an account yet ?
+		</p>
+	
+		<p>
+			<a href="http://www.deezer.com/fr/register.php" target="_blank">Register here</a>
+		</p>
+	</div>
+</div>

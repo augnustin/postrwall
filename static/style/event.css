@@ -1,0 +1,238 @@
+#event {
+	margin: 0 auto;
+	width:700px;
+}
+
+#back {
+	background-image: url('/design/X-Button.png');
+	background-size:51px 53px;
+	height:51px;
+	width:53px;
+	position:absolute;
+	left:75px;
+	display:block;
+}
+
+.eventSubBlock {
+	margin: 10px 15px;
+	display: inline-block;
+}
+
+#eventPoster {
+	border: thick solid white;
+	padding: 10px;
+	background-size: 290px 450px;
+	width: 270px;
+	height: 430px;
+	margin-top:20px;
+}
+
+#eventControl {
+	background-image: url('/design/poster.png');
+	background-size: 324px 476px;
+	width: 324px;
+	height: 476px;
+	vertical-align: top;
+}
+
+#eventPlayer {
+	height: 380px;
+	padding: 0px 10px;
+}
+
+#buttonsControl {
+	height: 65px;
+	margin-bottom: 0px;
+	padding: 5px 20px;
+}
+
+#eventName {
+	height: 20px;
+	width: inherit;
+	padding: 2px;
+	text-align: center;
+}
+
+.eventButtons {
+	height: 50px;
+	width: inherit;
+	height: 63px;
+	display: inline-block;
+	color: #3D6075;
+	font-size: 0.8em;
+	padding: 0px 5px;
+}
+
+.eventButtons p {
+	margin:0;
+}
+
+#event-title {
+	width:inherit;
+	height:100px;
+	text-align: center;
+	margin-top: 15px;
+	vertical-align: middle;
+	padding:0px 20px ;
+}
+
+#event-title .title {
+	padding: 5px;
+	font-size: 1.1em;
+}
+
+#event-title p {
+	padding: 0px 3px;
+	margin: 0px;
+}
+
+
+#event-title a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#event-title a:hover {
+	text-decoration: underline;
+}
+
+#event-title-bottom {
+	margin-top:10px;
+}
+
+input[type="button"] {
+	height: 32px;
+	width: 49px;
+	display: inline-block;
+	border: none;
+	background-color: transparent;
+	margin: 3px;
+}
+
+#event-content {
+	width:inherit;
+	height:265px;
+	margin: 0 15px;
+}
+
+#trackList {
+	width: inherit;
+ 	display: block;
+	max-height: 265px;
+	min-height: 265px;
+	overflow-y: auto;
+
+}
+
+
+#trackList tbody, tr, td {
+	display: block;
+	width: inherit;
+}
+
+#trackList tbody {
+}
+
+
+#trackList tbody td {
+	width: inherit;
+	padding: 5px;
+	padding-right:25px;
+	margin: 0px;
+	border-bottom: thin solid #809FAF;
+	color: #333333;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: right;
+	overflow:hidden;
+	height:1.25em;
+}
+
+#trackList tbody td:hover {
+	background-color: rgba(61, 96, 117, 0.2);
+	color: #3D6075;
+	cursor: pointer;
+	background-image: url('../design/play-blue.png');
+	overflow:visible;
+	height:auto;
+}
+
+#trackList tbody td.currentTrack {
+	background: rgba(61, 96, 117, 0.2);
+	color: #3D6075;
+	background-image: url('../design/speeker-padded.png');
+	background-repeat: no-repeat;
+	background-position: right;
+
+
+}
+
+#trackList tbody td.currentTrack:hover {
+	background-image: url('../design/pause-blue.png');
+}
+
+#trackList tbody a {
+	text-decoration: none;
+	color: #333333;
+}
+
+#trackList tbody a:hover {
+	text-decoration: underline;
+}
+
+button {
+	height : 32px;
+	width: 49px;
+	display: inline-block;
+	border: none;
+	background-color: transparent;
+	margin: 3px;
+}
+
+#MailShareButton {
+	background-image: url('/design/mail_button_1.png')
+}
+
+#MailShareButton:hover {
+	background-image: url('/design/mail_button_over.png')
+}
+
+#MailShareButton:active {
+	background-image: url('/design/mail_button_pressed.png')
+}
+
+#BuyTicketsButton {
+	background-image: url('/design/buy_button_1.png')
+}
+
+#BuyTicketsButton:hover {
+	background-image: url('/design/buy_button_over.png')
+}
+
+#BuyTicketsButton:active {
+	background-image: url('/design/buy_button_pressed.png')
+}
+
+#FacebookShareButton {
+	background-image: url('/design/facebook_button_1.png');
+}
+
+#FacebookShareButton:hover {
+	background-image: url('/design/facebook_button_over.png')
+}
+
+#FacebookShareButton:active {
+	background-image: url('/design/facebook_button_pressed.png')
+}
+
+#TwitterShareButton {
+	background-image: url('/design/twitter_button_1.png')
+}
+
+#TwitterShareButton:hover {
+	background-image: url('/design/twitter_button_over.png')
+}
+
+#TwitterShareButton:active {
+	background-image: url('/design/twitter_button_pressed.png')
+}

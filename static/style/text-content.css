@@ -1,0 +1,23 @@
+#contentText {
+	width:inherit;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 10px 0px 10px 0px;
+}
+
+#contentTextPadding {
+	padding: 20px;
+}
+
+#contentText  a {
+	text-decoration: none;
+	color: #809FAF;
+}
+
+#contentText a:hover {
+	text-decoration: underline;
+}
+
+#contentText h2, h3 {
+	margin:2px;
+}

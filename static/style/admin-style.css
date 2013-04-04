@@ -1,0 +1,127 @@
+.error {
+	color: red;
+	background-color: rgba(1,0,0,0.6);
+}
+
+.conf {
+	color: green;
+	background-color: rgba(0,1,0,0.6);	
+}
+
+.msg {
+	padding: 5px 20px;
+	border-radius: 10px;
+	margin: 10px 20px;
+	width:auto;
+	text-align:center;
+}
+
+.thumb {
+	height: 100px;
+	width: 66px;
+}
+
+.event-content {
+	display: inline-block;
+	vertical-align: top;
+	padding: 3px;
+}
+
+.event-actions {
+	float: right;
+}
+
+.mini-event {
+	margin: 5px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.mini-event:hover {
+	background-color: rgba(0,0,0,0.6);
+}
+
+#MyEvents-action {
+	float: right;
+}
+
+#event-order ul, li {
+	list-style: none;
+	display: inline;
+	margin:0;
+	padding:0;
+}
+
+#ManageEventForm {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	margin: 10px;
+}
+
+#ManageEventForm ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#ManageEventForm input, textarea {
+	background-color: transparent;
+	color: white;
+	border: thin dotted white;
+	width: 200px;
+	padding: 3px;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+#ManageEventForm input, textarea {
+	background-color: rgba(0,0,0,0.6);
+}
+
+#poster-preview-div {
+	display: inline-block;
+	margin: 10px;
+}
+
+#poster-preview {
+	width: 196px;
+	height: 300px;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+#playlist-preview-div {
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+}
+
+div.ui-datepicker {
+	font-size: 0.7em;
+}
+
+#trackList {
+	width: 225px;
+}
+
+#trackList td {
+	overflow: hidden;
+}
+
+#trackList td:hover {
+	overflow: visible;
+	background-color: rgba(0,0,0,0.6);
+}
+
+#auto-completion {
+	position: absolute;
+	background: white;
+	width: 300px;
+	color:black;
+	display:none;	
+}
+
+#auto-completion ul li {
+	display:block;
+}

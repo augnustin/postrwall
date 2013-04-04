@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="dz-root"></div>
+
+<div id="contentText">
+	<div id="contentTextPadding">
+		{% if event %}
+		<h2>Update Event</h2>
+		{% else %}
+		<h2>Create Event</h2>
+		{% endif %}
+		<form action="/Admin/SubmitEvent" method="post" id="ManageEventForm">
+			 <input type="hidden" name="event" value="{{event.key}}">
+			<h3>Details</h3>
+			<table>
+				<tbody>
+					<tr>
+						<td>Poster</td><td>
+						<input type="url" name="posterUrl" value="{{event.posterUrl}}" id="posterUrlInput" />
+						</td>
+					</tr>
+					<tr>
+						<td>Name</td><td>
+						<input type="text" name="name" value="{{event.name}}"/>
+						</td>
+					</tr>
+					<tr>
+						<td>Date</td><td>
+						<input type="date" id="date" name="date" value="{{event.getDate}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>Description</td><td>
+							<textarea name="description">{{event.description}}</textarea></td>
+					</tr>
+					<tr>
+						<td>Webpage</td><td>
+						<input type="url" name="webpage" value="{{event.webpage}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>Address</td><td>
+						<input type="text" name="address" value="{{event.address}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>Price</td><td>
+						<input type="number" name="price" value="{{event.price}}" />
+						</td>
+					</tr>
+					<tr>
+						<td>Artists
+						<br />
+						<img src="/design/plus.png" id="button-plus" /><img src="/design/minus.png" id="button-minus" />
+						<br />
+						<img src="/design/thumb-deezer.png" id="generate-preview" /></td><td>
+						<ul id="artist-input-list">
+							{% if event %}
+							{% for artist in event.artists %}
+							<li>
+								<input type="text" id="artist-{{forloop.counter}}" name="artist-{{forloop.counter}}" value="{{artist}}" class="artist-input" />
+							</li>
+							{% endfor %}
+							{% else %}
+							<li>
+								<input type="text" name="artist-1" id="artist-1" class="artist-input"/>
+							</li>
+							<li>
+								<input type="text" name="artist-2" id="artist-2" class="artist-input"/>
+							</li>
+							{% endif %}
+						</ul></td>
+					</tr>
+					<!--
+					<tr>
+					<td>Genres</td>
+					<td>
+					<ul>
+					<li>
+					<label for="electro">Electro</label>
+					<input type="checkbox" name="Electro" id='electro'/>
+					</li>
+					<li>
+					<input type="checkbox" name="Minimale" />
+					</li>
+					<li>
+					<input type="checkbox" name="Rock" />
+					</li>
+					<li>
+					<input type="checkbox" name="Pop" />
+					</li>
+					<li>
+					<input type="checkbox" name="Jazz" />
+					</li>
+					<li>
+					<input type="checkbox" name="Funk" />
+					</li>
+					<li>
+					<input type="checkbox" name="Soul" />
+					</li>
+					</ul></td>
+					</tr>
+					-->
+					<tr>
+						<td colspan="2"> {% if event %}
+						<input type="submit" value="Update Event">
+						{% else %}
+						<input type="submit" value="Insert Event">
+						{% endif %} </td>
+					</tr>
+
+				</tbody>
+
+			</table>
+		</form>
+		<div id="poster-preview-div">
+			<h3>Poster Preview</h3>
+			{% if event %}
+			<img src="{{event.posterUrl}}" id="poster-preview" />
+			{% else %}
+			<img src="/design/default-poster.jpg" id="poster-preview" />			
+			{% endif %}
+		</div>
+		<div id="playlist-preview-div">
+			<h3>Playlist Preview</h3>
+			<div>
+				<table id="trackList">
+					<thead>
+						<tr>
+							<td>Tracks from Deezer</td>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</div>
+{% endblock %}

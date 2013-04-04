@@ -1,0 +1,14 @@
+{% if mini %}
+	<div class="mini-event">
+		<img src="{{event.posterUrl}}" class="thumb"/>
+		<div class="event-content">
+		<h3>{{event.name}} </h3>
+		{{event.date}} - {{event.address}}
+		<p>{{event.description}}</p>
+		</div>
+		<div class="event-actions">
+			<a href="/Admin/EditEvent?event={{event.key}}">Edit Event</a>
+			<a href="/Admin/DeleteEvent?event={{event.key}}">Delete Event</a>
+		</div>
+	</div>
+{% endif %}

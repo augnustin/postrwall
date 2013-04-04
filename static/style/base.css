@@ -1,0 +1,62 @@
+body {
+	background-color: #141A22;
+	background-image:url('/design/background.gif');
+	background-repeat:repeat-x;
+	font-family: "Lucida Grande";
+	font-size:1em;
+	color: #E6E6E6;
+	margin: 0;
+
+}
+
+
+#all {
+	width: 850px;
+	height: 600px;
+	margin: 0px auto;
+	background-image: url("/design/dirt2.png"), url('/design/dirt1.png') ;
+	background-repeat: no-repeat;
+	background-position:  left 400px, right 61px;
+}
+
+header {
+	width:inherit;
+	height: 60px;
+}
+
+#banner {
+	background-image: url('/design/logo.gif');
+	position:absolute;
+	margin:0px;
+	height: 60px;
+	width:270px;
+}
+
+#banner:hover {
+	background-image: url('/design/logo_over.gif');
+}
+
+#menu-right {
+	vertical-align:bottom;
+	float:right;
+	height:inherit;
+	padding-top:20px;
+}
+
+#menu-right a {
+	color:#809FAF;
+	text-decoration:none;
+	text-shadow: -0.05em -0.05em 0.1em black;
+	padding:10px;	
+}
+
+#menu-right a:hover {
+	color:#E9E9E9;
+}
+
+#content, #content2 {
+	display:none;
+	position: absolute;
+	width: inherit;
+	margin-top:15px;
+}

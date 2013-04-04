@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="contentText">
+	<div id="contentTextPadding">
+
+	<h2>Login</h2>
+	<form method="post">
+		<table>
+			<tbody>
+				{% if error %}
+				<tr>
+					<td colspan="2">
+						<span class="error">{{error}}</span>
+					</td>
+				</tr>
+				{% endif %}
+				<tr>
+					<label for="username"> <td>Username :</td> <td>
+						<input type="text" name="username" value = "{{username}}"/>
+						</td> </label>
+				</tr>
+				<tr>
+					<label for="password"> <td>Password :</td> <td>
+						<input type="password" name="password" />
+						</td> </label>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="submit" value="Login" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+	You want to promote a concert and don't have a login access ? Click here to register.
+	</div>
+</div>
+{% endblock %}
